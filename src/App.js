@@ -3,7 +3,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions, stepButtonClasses } from '@mui/material';
+import { Button, CardActionArea, CardActions } from '@mui/material';
 
 const App = () => {
   const [data, setData] = useState(null);
@@ -14,8 +14,6 @@ const App = () => {
       const result = await response.json();
       const arr = result['articles'];
       setData(arr);
-      setImmediate();
-      
     };
 
     fetchData();
